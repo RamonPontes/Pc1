@@ -7,14 +7,32 @@
         x:Class="BdCSharp.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="BdCSharp">
+        Title="Cadastro de Pessoas">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Arquivo">
+                    <MenuItem Header="_Novo..." Command="{Binding Novo}" />
+                    <MenuItem Header="_Alterar..." Command="{Binding Altera}" />
+                    <MenuItem Header="_Excluir..." Command="{Binding Exclui}" />
+                    <MenuItem Header="_Sair..." Command="{Binding Sair}" />
+                </MenuItem>
+            </Menu>
+            <ScrollViewer DockPanel.Dock="Bottom">
+                <StackPanel>
+                    <DataGrid VerticalAlignment="Stretch"
+                    SelectionMode="Single" SelectedItem="{Binding PessoaAtual}"
+                    Margin="20" ItemsSource="{Binding Pessoas}"
+                    IsReadOnly="True"
+                    GridLinesVisibility="All"
+                    BorderThickness="1" BorderBrush="Gray">
+                        <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Nome" MinWidth="200" Binding="{Binding Nome}" />
+                        <DataGridTextColumn Header="CPF" Binding="{Binding Cpf}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
 </Window>

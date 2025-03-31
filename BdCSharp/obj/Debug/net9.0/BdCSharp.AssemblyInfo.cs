@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BdCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed2599dd5a33181fdc1ae3681e1fb3857f1e5cb0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5137a71568ec9920fea3c4f1fd84d4405627d8de")]
 [assembly: System.Reflection.AssemblyProductAttribute("BdCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BdCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

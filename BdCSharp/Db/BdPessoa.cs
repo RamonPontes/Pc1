@@ -29,7 +29,7 @@ namespace BdCSharp.Bd {
                 var result = box.ShowAsync();
             }
         }
-        public void Atualizar(Pessoa pessoa) {
+        public void Atualiza(Pessoa pessoa) {
             MySqlDataAdapter da = new();
             MySqlCommand cmd = new();
             
@@ -52,7 +52,7 @@ namespace BdCSharp.Bd {
                 var result = box.ShowAsync();
             }
         }
-        public void Atualizar(int id) {
+        public void Exclui(int id) {
             MySqlDataAdapter da = new();
             MySqlCommand cmd = new();
             
@@ -105,6 +105,42 @@ namespace BdCSharp.Bd {
             }
 
             return pessoa;
+        }
+
+        public List<Pessoa> Pesquisa(String nome) {
+            List<Pessoa> lista = [];
+            MySqlDataReader dr;
+            MySqlCommand cmd = new();
+
+            try {
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "select * from pessoa where nome like @nome";
+                cmd.Parameters.AddWithValue("@nome", "%" + nome + "%");
+                cmd.Connection = Bd.Conexao;
+                dr = cmd.ExecuteReader();
+                
+                while (dr.Read()) {
+                    Pessoa pessoa = new();
+                    pessoa.Id = dr.GetInt32("id");
+                    pessoa.Nome = dr.GetString("nome");
+                    pessoa.Cpf = dr.GetString("cpf");
+
+                    lista.Add(pessoa);
+                }
+                
+                dr.Close();
+                cmd.Dispose();
+            } catch (Exception e) {
+                var box = MessageBoxManager.GetMessageBoxStandard(
+                    "Erro",
+                    e.Message,
+                    MsBox.Avalonia.Enums.ButtonEnum.Ok
+                );
+
+                var result = box.ShowAsync();
+            }
+
+            return lista;
         }
     }
 }

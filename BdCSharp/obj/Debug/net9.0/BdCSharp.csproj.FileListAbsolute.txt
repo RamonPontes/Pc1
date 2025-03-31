@@ -1,0 +1,14 @@
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.csproj.AssemblyReference.cache
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/Avalonia/resources
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.AssemblyInfoInputs.cache
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.AssemblyInfo.cs
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.csproj.CoreCompileInputs.cache
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.sourcelink.json
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/Avalonia/BdCSharp.dll
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/Avalonia/BdCSharp.pdb
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/refint/Avalonia/BdCSharp.dll
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.dll
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/refint/BdCSharp.dll
+/home/info2025/Desktop/Pc1/BdCSharp/obj/Debug/net9.0/BdCSharp.pdb
