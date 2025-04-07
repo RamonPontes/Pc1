@@ -1,13 +1,12 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
-
+using BdCSharp.Models;
+using BdCSharp.ViewModels;
 namespace BdCSharp.Views;
-
 public partial class PessoaEditView : Window
 {
-    public PessoaEditView()
+    public PessoaEditView(Pessoa pessoa, MainWindowViewModel main)
     {
         InitializeComponent();
+        DataContext = new PessoaEditViewModel(pessoa, main);
     }
 }

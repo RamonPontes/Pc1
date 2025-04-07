@@ -4,7 +4,7 @@ namespace BdCSharp.Bd {
     public class Bd {
         static string usuario = "root";
         static string banco = "pessoa";
-        static string senha = "vertigo";
+        static string senha = "vertrigo";
         static string servidor = "localhost";
         static MySqlConnection conexao;
 
@@ -12,7 +12,7 @@ namespace BdCSharp.Bd {
             get {   
                 if (conexao == null || conexao.State == System.Data.ConnectionState.Broken || conexao.State == System.Data.ConnectionState.Closed) {
                     string strConnString = string.Format(
-                        "Data source={0};user_id={1};password={2};database={3};sslmode=none;", servidor, usuario, senha, banco
+                        "Data source={0};user id={1};password={2};database={3};sslmode=none;", servidor, usuario, senha, banco
                     );
 
                     conexao = new MySqlConnection();
