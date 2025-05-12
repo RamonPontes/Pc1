@@ -1,0 +1,14 @@
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.csproj.AssemblyReference.cache
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/Avalonia/Resources.Inputs.cache
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/Avalonia/resources
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.GeneratedMSBuildEditorConfig.editorconfig
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.AssemblyInfoInputs.cache
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.AssemblyInfo.cs
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.csproj.CoreCompileInputs.cache
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.sourcelink.json
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/Avalonia/CrudProduto.dll
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/Avalonia/CrudProduto.pdb
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/refint/Avalonia/CrudProduto.dll
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.dll
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/refint/CrudProduto.dll
+/home/info2025/Desktop/Pc1/CrudProduto/obj/Debug/net9.0/CrudProduto.pdb

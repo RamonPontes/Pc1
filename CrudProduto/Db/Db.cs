@@ -1,7 +1,7 @@
 using MySql.Data.MySqlClient;
 
-namespace BdCSharp.Bd {
-    public class Bd {
+namespace CrudProduto.Db {
+    public class Db {
         static string usuario = "root";
         static string banco = "produto";
         static string senha = "vertrigo";

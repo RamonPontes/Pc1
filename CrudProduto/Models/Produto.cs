@@ -1,18 +1,14 @@
 namespace CrudProduto.Models {
     public class Produto {
         public int Id { get; set; }
-        public string? Descricao { get; set; }
-        public string? Marca { get; set; }
-        public int Quantidade { get; set; }
+        public string? Nome { get; set; }
+        public int? Valor { get; set; }
 
-        public Produto(string descricao, string marca, int quantidade) {
-            Descricao = descricao;
-            Marca = marca;
-            Quantidade = quantidade;
+        public Produto(string nome, int valor) {
+            Nome = nome;
+            Valor = valor;
         }
 
-        public Produto() {
-
-        }
+        public Produto() { }
     }
 }
