@@ -1,0 +1,33 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:BdCSharp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="BdCSharp.Views.ProdutoEditView"
+        x:DataType="vm:ProdutoEditViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Inclusão/Alteração">
+
+    <Border Margin="50">
+        <StackPanel Orientation="Vertical">
+            
+            <TextBlock>Id</TextBlock>
+            <TextBox Text="{Binding ProdutoAtual.Id}" IsReadOnly="true" />
+            
+            <TextBlock>Descricao</TextBlock>
+            <TextBox Text="{Binding ProdutoAtual.Descricao}" />
+            
+            <TextBlock>Marca</TextBlock>
+            <TextBox Text="{Binding ProdutoAtual.Marca}" />
+            
+            <TextBlock>Quantidade</TextBlock>
+            <TextBox Text="{Binding ProdutoAtual.Quantidade}" />
+
+            <Button Command="{Binding Salva}">Salvar</Button>
+        
+        </StackPanel>
+    </Border>
+</Window>
