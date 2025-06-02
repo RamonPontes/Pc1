@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CrudProduto.Db;
+using CrudProduto.Bd;
 using CrudProduto.Models;
 using CrudProduto.Views;
 
 namespace CrudProduto.ViewModels;
 
-public partial class MainWindowViewModel : ViewModelBase, INotifyPropertyChanged
+public class MainWindowViewModel : ViewModelBase, INotifyPropertyChanged
 {
-    ObservableCollection<Produto> produtos = [];
+    ObservableCollection<Produto> produtos = new();
     Produto produtoAtual = new();
     public ProdutoEditView produtoEditView { get; set; }
+
     public Produto ProdutoAtual
     {
         get
@@ -26,52 +27,61 @@ public partial class MainWindowViewModel : ViewModelBase, INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
+
     public MainWindowViewModel()
     {
         AtualizaGrid();
     }
+
     public event PropertyChangedEventHandler? PropertyChanged;
+
     protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }
+
     public void AtualizaGrid()
     {
-        DbProduto bdp = new();
-        List<Produto> lista = bdp.Pesquisa("");
+        BdProduto bdProduto = new();
+        List<Produto> lista = bdProduto.Pesquisa("");
         Produtos.Clear();
         foreach (Produto p in lista)
         {
             Produtos.Add(p);
         }
     }
+
     public void Novo()
     {
-        produtoEditView = new(new(), this);
+        produtoEditView = new ProdutoEditView(new Produto(), this);
         produtoEditView.Show();
         AtualizaGrid();
     }
+
     public void Altera()
     {
         if (ProdutoAtual.Id != 0)
         {
-            produtoEditView = new(ProdutoAtual, this);
+            produtoEditView = new ProdutoEditView(ProdutoAtual, this);
             produtoEditView.Show();
         }
     }
+
     public void Exclui()
     {
         if (ProdutoAtual.Id != 0)
         {
-            DbProduto bdPessoa = new DbProduto();
-            bdPessoa.Exclui(ProdutoAtual.Id);
+            BdProduto bdProduto = new BdProduto();
+            bdProduto.Exclui(ProdutoAtual.Id);
             AtualizaGrid();
         }
     }
+
     public void Sair()
     {
         Environment.Exit(0);
     }
+
     public ObservableCollection<Produto> Produtos
     {
         get

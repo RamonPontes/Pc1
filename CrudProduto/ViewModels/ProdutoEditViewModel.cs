@@ -1,6 +1,6 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using CrudProduto.Db;
+using CrudProduto.Bd;
 using CrudProduto.Models;
 
 namespace CrudProduto.ViewModels
@@ -9,6 +9,7 @@ namespace CrudProduto.ViewModels
     {
         Produto produtoAtual = new();
         MainWindowViewModel main;
+
         public Produto ProdutoAtual
         {
             get
@@ -27,22 +28,27 @@ namespace CrudProduto.ViewModels
             ProdutoAtual = produto;
             this.main = main;
         }
+
         public event PropertyChangedEventHandler? PropertyChanged;
+
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         public void Salva()
         {
-            DbProduto dbProduto = new();
+            BdProduto bdProduto = new();
+
             if (ProdutoAtual.Id == 0)
             {
-                dbProduto.Insere(ProdutoAtual);
+                bdProduto.Insere(ProdutoAtual);
             }
             else
             {
-                dbProduto.Atualiza(ProdutoAtual);
+                bdProduto.Atualiza(ProdutoAtual);
             }
+
             main.AtualizaGrid();
             main.produtoEditView.Close();
         }

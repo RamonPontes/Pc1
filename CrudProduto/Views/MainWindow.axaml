@@ -7,33 +7,33 @@
         x:Class="CrudProduto.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="CrudProduto">
+        Title="Cadastro de Produtos">
 
-        <DockPanel>
-            <Menu DockPanel.Dock="Top">
-                <MenuItem Header="_Arquivo">
-                    <MenuItem Header="_Novo..." Command="{Binding Novo}" />
-                    <MenuItem Header="_Alterar..." Command="{Binding Altera}" />
-                    <MenuItem Header="_Excluir..." Command="{Binding Exclui}" />
-                    <MenuItem Header="_Sair..." Command="{Binding Sair}" />
-                </MenuItem>
-            </Menu>
-            <ScrollViewer DockPanel.Dock="Bottom">
-                <StackPanel>
-                    <DataGrid VerticalAlignment="Stretch"
-                    SelectionMode="Single" SelectedItem="{Binding ProdutoAtual}"
-                    Margin="20" ItemsSource="{Binding Produtos}"
-                    IsReadOnly="True"
-                    GridLinesVisibility="All"
-                    BorderThickness="1" BorderBrush="Gray">
-                        <DataGrid.Columns>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Arquivo">
+                <MenuItem Header="_Novo..." Command="{Binding Novo}" />
+                <MenuItem Header="_Alterar..." Command="{Binding Altera}" />
+                <MenuItem Header="_Excluir..." Command="{Binding Exclui}" />
+                <MenuItem Header="_Sair..." Command="{Binding Sair}" />
+            </MenuItem>
+        </Menu>
+        <ScrollViewer DockPanel.Dock="Bottom">
+            <StackPanel>
+                <DataGrid VerticalAlignment="Stretch"
+                          SelectionMode="Single" SelectedItem="{Binding ProdutoAtual}"
+                          Margin="20" ItemsSource="{Binding Produtos}"
+                          IsReadOnly="True"
+                          GridLinesVisibility="All"
+                          BorderThickness="1" BorderBrush="Gray">
+                    <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
-                        <DataGridTextColumn Header="Nome" MinWidth="200" Binding="{Binding Nome}" />
-                        <DataGridTextColumn Header="Valor" Binding="{Binding Valor}" />
-                        </DataGrid.Columns>
-                    </DataGrid>
-                </StackPanel>
-            </ScrollViewer>
-        </DockPanel>
-
+                        <DataGridTextColumn Header="Descrição" MinWidth="200" Binding="{Binding Descricao}" />
+                        <DataGridTextColumn Header="Marca" Binding="{Binding Marca}" />
+                        <DataGridTextColumn Header="Quantidade" Binding="{Binding Quantidade}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
 </Window>

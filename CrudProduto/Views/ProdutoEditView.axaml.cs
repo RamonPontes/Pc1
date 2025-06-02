@@ -1,6 +1,4 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
 using CrudProduto.Models;
 using CrudProduto.ViewModels;
 
@@ -11,6 +9,6 @@ public partial class ProdutoEditView : Window
     public ProdutoEditView(Produto produto, MainWindowViewModel main)
     {
         InitializeComponent();
-        DataContext = new ProdutoEditView(produto, main);
+        DataContext = new ProdutoEditViewModel(produto, main);
     }
 }

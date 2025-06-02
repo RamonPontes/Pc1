@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EFCSharp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="EFCSharp.Views.MusicaEditView"
+        x:DataType="vm:MusicaEditViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Inclusão/Alteração">
+
+    <Border Margin="50">
+        <StackPanel Orientation="Vertical" Spacing="10">
+
+            <TextBlock Text="Id" />
+            <TextBox Text="{Binding MusicaAtual.Id}" IsReadOnly="True" />
+
+            <TextBlock Text="Título" />
+            <TextBox Text="{Binding MusicaAtual.Titulo}" />
+
+            <TextBlock Text="Intérprete" />
+            <TextBox Text="{Binding MusicaAtual.Interprete}" />
+
+            <TextBlock Text="Letra" />
+            <TextBox Text="{Binding MusicaAtual.Letra}"
+                     Height="100"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap" />
+
+            <Button Command="{Binding Salva}" Content="Salvar" HorizontalAlignment="Right" />
+
+        </StackPanel>
+    </Border>
+
+</Window>
