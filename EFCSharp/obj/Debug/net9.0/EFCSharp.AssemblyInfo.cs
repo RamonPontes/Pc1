@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCSharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8396a0ef623ab4153b2b5601e87976353b199a96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+585dc6172aea5d0d23d3faeab10ae74b04a62d6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCSharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCSharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

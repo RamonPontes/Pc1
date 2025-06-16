@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EFCSharpCliente.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="EFCSharpCliente.Views.ClienteEditView"
+        x:DataType="vm:ClienteEditViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Inclusão/Alteração">
+
+    <Border Margin="50">
+        <StackPanel Orientation="Vertical" Spacing="10">
+
+            <TextBlock Text="Id" />
+            <TextBox Text="{Binding ClienteAtual.Id}" IsReadOnly="True" />
+
+            <TextBlock Text="Nome" />
+            <TextBox Text="{Binding ClienteAtual.Nome}" />
+
+            <TextBlock Text="Endereço" />
+            <TextBox Text="{Binding ClienteAtual.Endereco}" />
+
+            <TextBlock Text="Cidade" />
+            <TextBox Text="{Binding ClienteAtual.Cidade}" />
+
+            <TextBlock Text="UF" />
+            <TextBox Text="{Binding ClienteAtual.Uf}" />
+
+            <TextBlock Text="Limite" />
+            <TextBox Text="{Binding ClienteAtual.Limite}" />
+
+            <Button Command="{Binding Salva}" Content="Salvar" HorizontalAlignment="Right" />
+        </StackPanel>
+    </Border>
+
+</Window>

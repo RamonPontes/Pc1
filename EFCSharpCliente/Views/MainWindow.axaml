@@ -1,0 +1,54 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:EFCSharpCliente.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        x:Class="EFCSharpCliente.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Cadastro de Músicas">
+
+    <DockPanel>
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_Arquivo">
+                <MenuItem Header="_Novo..." Command="{Binding Novo}" />
+                <MenuItem Header="_Alterar..." Command="{Binding Altera}" />
+                <MenuItem Header="_Excluir..." Command="{Binding Exclui}" />
+                <MenuItem Header="_Sair..." Command="{Binding Sair}" />
+            </MenuItem>
+        </Menu>
+
+        <ScrollViewer DockPanel.Dock="Bottom">
+            <StackPanel>
+
+                <DataGrid VerticalAlignment="Stretch"
+                          SelectionMode="Single"
+                          SelectedItem="{Binding ClienteAtual}"
+                          Margin="20"
+                          ItemsSource="{Binding Clientes}"
+                          IsReadOnly="True"
+                          GridLinesVisibility="All"
+                          BorderThickness="1"
+                          BorderBrush="Gray">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Binding="{Binding Id}" />
+                        <DataGridTextColumn Header="Nome" MinWidth="200" Binding="{Binding Nome}" />
+                        <DataGridTextColumn Header="Cidade" Binding="{Binding Cidade}" />
+                        <DataGridTextColumn Header="UF" Binding="{Binding Uf}" />
+                        <DataGridTextColumn Header="Limite" Binding="{Binding Limite}" />
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </StackPanel>
+        </ScrollViewer>
+
+    </DockPanel>
+
+</Window>
