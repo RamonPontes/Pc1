@@ -65,3 +65,4 @@
 /home/info2025/Desktop/Pc1/CalculadoraAvalonia/obj/Debug/net9.0/Calculad.C040E356.Up2Date
 /home/info2025/Desktop/Pc1/CalculadoraAvalonia/obj/Debug/net9.0/CalculadoraAvalonia.genruntimeconfig.cache
 /home/info2025/Desktop/Pc1/CalculadoraAvalonia/obj/Debug/net9.0/ref/CalculadoraAvalonia.dll
+/home/info2025/Desktop/Pc1/CalculadoraAvalonia/obj/Debug/net9.0/CalculadoraAvalonia.sourcelink.json
